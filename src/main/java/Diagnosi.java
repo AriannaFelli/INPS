@@ -1,29 +1,45 @@
+import org.example.Dottore;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Diagnosi {
-/*📝 3. Classe Diagnosi
-Attributi:
-descrizione (String) - descrizione della diagnosi
-terapia (String) - trattamento consigliato
-data (LocalDate) - data della diagnosi
-dataScadenza (LocalDate) - scadenza della diagnosi
-dottore (Dottore) - dottore che ha effettuato la diagnosi
-Metodi:
-isScaduta(): verifica se la diagnosi è scaduta.
-stampaDettagli(): stampa i dettagli della diagnosi*/
 
     String descrizione;
     String terapia;
     LocalDate data;
     LocalDate dataScadenza;
-    //Dottore dottore = new Dottore();
+    Dottore dottore = new Dottore();
 
     public Diagnosi(String descrizione, String terapia, LocalDate data, LocalDate dataScadenza) {
         this.descrizione = descrizione;
         this.terapia = terapia;
         this.data = data;
         this.dataScadenza = dataScadenza;
+    }
+
+    public Diagnosi() {
+
+    }
+
+    public String getDescrizione() {
+        return descrizione;
+    }
+
+    public String getTerapia() {
+        return terapia;
+    }
+
+    public LocalDate getData() {
+        return data;
+    }
+
+    public LocalDate getDataScadenza() {
+        return dataScadenza;
+    }
+
+    public Dottore getDottore() {
+        return dottore;
     }
 
     @Override
@@ -45,7 +61,7 @@ stampaDettagli(): stampa i dettagli della diagnosi*/
 
     ;
 
-    public static ArrayList<String> getDettagliDiagnosiList(ArrayList<Diagnosi> diagnosiList) {
+    public ArrayList<String> getDettagliDiagnosiList(ArrayList<Diagnosi> diagnosiList) {
         ArrayList<String> dettagli = new ArrayList<>();
         for (Diagnosi d : diagnosiList) {
             dettagli.add(d.toString());
