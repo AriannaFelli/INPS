@@ -11,6 +11,7 @@ public class Dottore {
     private String email;
 
     private ArrayList<String> orariDisponibili;
+
     private ArrayList<Paziente> pazienti;
 
     public Dottore(String idDottore, String nome, String cognome, String specializzazione, String telefono, String email) {
